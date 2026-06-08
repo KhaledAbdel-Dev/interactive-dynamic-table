@@ -5,7 +5,7 @@ COMP 4610 GUI I
 **Author:** Khaled Abdelrahman
 **Email:** khaled_abdelrahman@student.uml.edu
 
-## Links (fill these in after you upload to GitHub)
+## Links
 
 - **Live application:** https://khaledabdel-dev.github.io/interactive-dynamic-table/
 - **GitHub repository:** https://github.com/KhaledAbdel-Dev/interactive-dynamic-table
