@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+  COMP 4610 GUI I - HW3: Interactive Dynamic Multiplication Table
+  Author:  Khaled Abdelrahman
+  Email:   khaled_abdelrahman@student.uml.edu
+  Date:    6/8/26
+
+  This page lets the user enter four numbers (a start and end value for the
+  columns and for the rows) and then builds a multiplication table from them.
+  The form, the styling, and the table-building code are kept in separate files
+  to keep things organized.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Multiplication Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Dynamic Multiplication Table</h1>
+
+  <!--
+    The form collects the four numbers. Notice the button is type="button"
+    (not type="submit") so the page never reloads. All work is done in JavaScript.
+  -->
+  <form id="rangeForm">
+    <fieldset>
+      <legend>Please enter the table ranges</legend>
+
+      <p class="hint">Values must be whole numbers between -50 and 50.</p>
+
+      <div class="field">
+        <label for="minCol">Minimum Column Value</label>
+        <input type="number" id="minCol" value="1">
+      </div>
+
+      <div class="field">
+        <label for="maxCol">Maximum Column Value</label>
+        <input type="number" id="maxCol" value="5">
+      </div>
+
+      <div class="field">
+        <label for="minRow">Minimum Row Value</label>
+        <input type="number" id="minRow" value="5">
+      </div>
+
+      <div class="field">
+        <label for="maxRow">Maximum Row Value</label>
+        <input type="number" id="maxRow" value="8">
+      </div>
+
+      <button type="button" id="generateButton">Generate Table</button>
+    </fieldset>
+  </form>
+
+  <!-- Error messages get written here. This is NOT a popup. -->
+  <div id="errorBox" class="error-box"></div>
+
+  <!--
+    The table is placed inside this scrollable container so that a large table
+    can be scrolled instead of breaking the page layout. The top row and the
+    first column stay fixed while scrolling (done with CSS in style.css).
+  -->
+  <div id="tableContainer" class="table-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
